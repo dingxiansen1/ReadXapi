@@ -1,6 +1,73 @@
 {
-  "book":{
-    "bookSourceName": "🎉E小说",
-    "bookSourceGroup": "🎉精选"
-  }
+  "needUpdateApp": true,
+  "bookSource": [
+    {
+      "bookSourceName": "笔趣阁",
+      "bookSourceUrl": "https://www.biquge7.xyz",
+      "enabled": true,
+      "searchUrl": "/search?keyword=",
+      "ruleSearch": {
+        "bookList": "div.tui_1_item",
+        "bookUrl": "div.item_title > div.title > a[href]",
+        "name": "a[title]",
+        "author": "div.item_title > div.title > span",
+        "cover": "a[href] > img[src]",
+        "lastUpdateTime": "",
+        "lastChapter": "",
+        "detail": "div.item_title > p"
+      },
+      "ruleBookInfo": {
+        "name": "div.tits > h1 > strong",
+        "cover": "div.tit > img[src]",
+        "author": "span.author",
+        "detail": "p.des",
+        "category": "div.navi > div a:eq(1)",
+        "latestUpdateTime": "span.upt",
+        "latestChapterTitle": "",
+        "tocUrl": ""
+      },
+      "ruleToc": {
+        "chapterList": "div.list > ul > li",
+        "chapterName": "li > a",
+        "chapterUrl": "li > a"
+      },
+      "ruleContent": {
+        "content": "div.text"
+      }
+    },
+    {
+      "bookSourceName": "🎉E小说",
+      "bookSourceUrl": "https://www.zwda.com",
+      "enabled": true,
+      "searchUrl": "/search.php?q=",
+      "ruleSearch": {
+        "bookList": "class.result-item",
+        "bookUrl": "class.result-item-title.0@tag.a.0@href",
+        "name": "class.result-item-title.0@tag.a.0@text",
+        "author": "class.result-game-item-info-tag.0@tag.span.1@text",
+        "cover": "tag.img.0@src",
+        "lastUpdateTime": "",
+        "lastChapter": "class.result-game-item-info-tag.3@tag.a.0@text",
+        "detail": "class.result-game-item-desc@text"
+      },
+      "ruleBookInfo": {
+        "name": "class.box_con.0@id.info@tag.h1.0@text",
+        "cover": "id.fmimg@tag.img.0@src",
+        "author": "class.box_con.0@id.info@tag.p.0@text##作\\s*者：",
+        "detail": "id.intro@tag.p.0@text",
+        "category": "",
+        "latestUpdateTime": "",
+        "latestChapterTitle": "",
+        "tocUrl": ""
+      },
+      "ruleToc": {
+        "chapterList": "id.list@tag.dd",
+        "chapterName": "tag.a@text",
+        "chapterUrl": "tag.a@href"
+      },
+      "ruleContent": {
+        "content": "id.content@textNodes"
+      }
+    }
+  ]
 }
